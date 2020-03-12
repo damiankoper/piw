@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lorem ipsum company</title>
+</head>
+
+<body>
+  <section class="hero is-info">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item is-uppercase has-text-weight-bold	is-size-4	" href="index.html">
+              <%= capitalize(loremIpsum({count:3, units:"word"})) %>
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active" href="/index.html">
+                Home
+              </a>
+              <a class="navbar-item" href="/about.html">
+                About us
+              </a>
+              <a class="navbar-item">
+                Boring stuff
+              </a>
+              <a class="navbar-item">
+                Even more boring stuff
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-tablet is-vcentered is-centered">
+          <div class="column">
+            <h1 class="title">
+              <%= capitalize(loremIpsum({count:3, units:"word"})) %>
+            </h1>
+            <p class="subtitle">
+              <%= capitalize(loremIpsum({count:3, units:"word"})) %>
+              <strong><%= loremIpsum({count:1, units:"word"}) %></strong>!
+            </p>
+          </div>
+          <div class="column has-text-centered" id="title-image-container">
+            <figure class="image is-1by1" id="title-image">
+              <img src="https://picsum.photos/300/300" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        <%= capitalize(loremIpsum({count:3, units:"word"})) %>
+      </h1>
+      <h2 class="subtitle">
+        <%= loremIpsum({count:4, units:"sentences"}) %>
+      </h2>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/1280/960" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
+                      alt="My photo" />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">
+                    <%= faker.name.firstName()+' '+faker.name.lastName()%>
+                  </p>
+                  <p class="subtitle is-6">
+                    @<%= faker.internet.userName()%>
+                  </p>
+                </div>
+              </div>
+              <div class="content">
+                <%= loremIpsum({count:2, units:"sentences"}) %>
+                <br />
+                <%= moment(faker.date.past()).format('hh:mm A - D MMM YYYY')%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/1280/960?cache" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
+                      alt="My photo" />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">
+                    <%= faker.name.firstName()+' '+faker.name.lastName()%>
+                  </p>
+                  <p class="subtitle is-6">
+                    @<%= faker.internet.userName()%>
+                  </p>
+                </div>
+              </div>
+              <div class="content">
+                <%= loremIpsum({count:2, units:"sentences"}) %>
+                <br />
+                <time>
+                  <%= moment(faker.date.past()).format('hh:mm A - D MMM YYYY')%>
+                </time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/1280/960?cache1" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
+                      alt="My photo" />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">
+                    <%= faker.name.firstName()+' '+faker.name.lastName()%>
+                  </p>
+                  <p class="subtitle is-6">
+                    @<%= faker.internet.userName()%>
+                  </p>
+                </div>
+              </div>
+              <div class="content">
+                <%= loremIpsum({count:2, units:"sentences"}) %>
+                <br />
+                <time>
+                  <%= moment(faker.date.past()).format('hh:mm A - D MMM YYYY')%>
+                </time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong><%= capitalize(loremIpsum({count:2, units:"words"})) %>!</strong>
+        <%= loremIpsum({count:2, units:"sentences"})%>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

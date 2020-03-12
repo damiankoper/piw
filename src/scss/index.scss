@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import "~bulma/bulma";
+
+#title-image-container {
+    display: flex;
+    justify-content: center;
+
+    #title-image {
+        border: 8px solid white;
+        box-shadow: 0 0 24px 8px #00000055;
+        transform: rotate(16deg) translateY(48px);
+        width: 300px !important;
+        padding-top: 300px !important;
+        justify-self: center;
+    }
+
+}
