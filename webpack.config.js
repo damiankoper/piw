@@ -38,6 +38,20 @@ module.exports = {
           }
         }
       ]
+    },
+    {
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            esModule: false,
+            name: '[name].[ext]',
+            outputPath: './fonts/',
+            publicPath: './fonts/'
+          }
+        }
+      ]
     }]
   },
   plugins: [
@@ -46,6 +60,8 @@ module.exports = {
     }),
     htmlPlugins('index'),
     htmlPlugins('about'),
+    htmlPlugins('boring'),
+    htmlPlugins('superboring'),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

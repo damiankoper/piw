@@ -1,9 +1,29 @@
 @charset "utf-8";
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+//@import '@fortawesome/fontawesome-free/css/all.css'
+
 @import "~bulma/bulma";
+
+.hero {
+    background-image: url("https://picsum.photos/1980/500");
+    background-blend-mode: multiply;
+    background-position: bottom;
+    background-size: cover;
+
+    .navbar {
+        background-color: #00000033;
+    }
+}
 
 #title-image-container {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 
     #title-image {
         border: 8px solid white;
@@ -13,5 +33,36 @@
         padding-top: 300px !important;
         justify-self: center;
     }
+}
 
+
+#contact {
+    p {
+        margin-bottom: 24px;
+        padding: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+
+        .icon {
+            background: while;
+            padding: 5px;
+            margin-right: 12px;
+
+            &+span {
+                display: inline-block;
+            }
+        }
+
+
+    }
+}
+
+.image-wrapped {
+    margin: 0 1em 1em 0;
 }

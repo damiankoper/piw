@@ -25,17 +25,22 @@
           </div>
           <div class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item is-active" href="/index.html">
+              <a class="navbar-item" href="index.html">
                 Home
               </a>
-              <a class="navbar-item" href="/about.html">
+              <a class="navbar-item is-active" href="about.html">
                 About us
               </a>
-              <a class="navbar-item">
+              <a class="navbar-item" href="boring.html">
                 Boring stuff
               </a>
-              <a class="navbar-item">
+              <a class="navbar-item" href="superboring.html">
                 Even more boring stuff
+              </a>
+              <a class="navbar-item" href="http://www.zsk.iiar.pwr.edu.pl/zsk/dyd/intinz/piw/lab/" title="Lovely PWR">
+                <span class="icon is-large">
+                  <i class="fas fa-2x fa-school" aria-hidden="true"></i>
+                </span>
               </a>
             </div>
           </div>
@@ -63,120 +68,127 @@
       </div>
     </div>
   </section>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        <%= capitalize(loremIpsum({count:3, units:"word"})) %>
-      </h1>
-      <h2 class="subtitle">
-        <%= loremIpsum({count:4, units:"sentences"}) %>
-      </h2>
-    </div>
-  </section>
+
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/1280/960" alt="Placeholder image" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
-                      alt="My photo" />
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4">
-                    <%= faker.name.firstName()+' '+faker.name.lastName()%>
-                  </p>
-                  <p class="subtitle is-6">
-                    @<%= faker.internet.userName()%>
-                  </p>
-                </div>
-              </div>
-              <div class="content">
-                <%= loremIpsum({count:2, units:"sentences"}) %>
-                <br />
-                <%= moment(faker.date.past()).format('hh:mm A - D MMM YYYY')%>
-              </div>
-            </div>
+        <div class="column" id="contact">
+          <div class="title">
+            Contact us anytime!
+          </div>
+          <div class="box">
+            <p>
+              <span class="icon is-large has-text-info">
+                <i class="fas fa-3x fa-home" aria-hidden="true"></i>
+              </span>
+              <span class="has-text-weight-medium	">
+                <%= faker.address.streetAddress()%>,<br><%= faker.address.city()%></span>
+            </p>
+            <p>
+              <span class="icon is-large has-text-info">
+                <i class="fas fa-3x fa-phone" aria-hidden="true"></i>
+              </span>
+              <span class="has-text-weight-medium	"><a
+                  href="tel:<%= faker.phone.phoneNumber()%>"><%= faker.phone.phoneNumber()%></a></span>
+            </p>
+            <p>
+              <span class="icon is-large has-text-info">
+                <i class="fas fa-3x fa-blender-phone" aria-hidden="true"></i>
+              </span>
+              <span class="has-text-weight-medium	"> <a href="tel:<%= faker.phone.phoneNumber()%>">
+                  <%= faker.phone.phoneNumber()%></a></span>
+            </p>
+            <p>
+              <span class="icon is-large has-text-info">
+                <i class="fas fa-3x fa-baby" aria-hidden="true"></i>
+              </span>
+              <span> <%= capitalize(loremIpsum({count:5, units:"word"}))%>!</span>
+            </p>
           </div>
         </div>
         <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/1280/960?cache" alt="Placeholder image" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
-                      alt="My photo" />
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4">
-                    <%= faker.name.firstName()+' '+faker.name.lastName()%>
-                  </p>
-                  <p class="subtitle is-6">
-                    @<%= faker.internet.userName()%>
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
+                    alt="Avatar">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong><%= faker.name.firstName()+' '+faker.name.lastName()%></strong>
+                    <small>@<%= faker.internet.userName()%></small>
+                    <br>
+                    <%= loremIpsum({count:1, units:"paragraph"}) %>
                   </p>
                 </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <a class="level-item" aria-label="reply">
+                      <span class="icon is-small">
+                        <i class="fas fa-reply" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <a class="level-item" aria-label="retweet">
+                      <span class="icon is-small">
+                        <i class="fas fa-retweet" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <a class="level-item" aria-label="like">
+                      <span class="icon is-small">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                  </div>
+                </nav>
               </div>
-              <div class="content">
-                <%= loremIpsum({count:2, units:"sentences"}) %>
-                <br />
-                <time>
-                  <%= moment(faker.date.past()).format('hh:mm A - D MMM YYYY')%>
-                </time>
-              </div>
-            </div>
+            </article>
           </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/1280/960?cache1" alt="Placeholder image" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
-                      alt="My photo" />
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4">
-                    <%= faker.name.firstName()+' '+faker.name.lastName()%>
-                  </p>
-                  <p class="subtitle is-6">
-                    @<%= faker.internet.userName()%>
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="https://api.adorable.io/avatars/96/<%=loremIpsum({count:1, units:'word'})%>.png"
+                    alt="Avator">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong><%= faker.name.firstName()+' '+faker.name.lastName()%></strong>
+                    <small>@<%= faker.internet.userName()%></small>
+                    <br>
+                    <%= loremIpsum({count:1, units:"paragraph"}) %>
                   </p>
                 </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <a class="level-item" aria-label="reply">
+                      <span class="icon is-small">
+                        <i class="fas fa-reply" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <a class="level-item" aria-label="retweet">
+                      <span class="icon is-small">
+                        <i class="fas fa-retweet" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <a class="level-item" aria-label="like">
+                      <span class="icon is-small">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                  </div>
+                </nav>
               </div>
-              <div class="content">
-                <%= loremIpsum({count:2, units:"sentences"}) %>
-                <br />
-                <time>
-                  <%= moment(faker.date.past()).format('hh:mm A - D MMM YYYY')%>
-                </time>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
+
+    </div>
     </div>
   </section>
   <footer class="footer">
