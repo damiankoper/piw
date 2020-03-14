@@ -1,4 +1,4 @@
-# Projektowanie interfejsów webowych - Lab 1
+# Projektowanie interfejsów webowych Lab 1 - TN 11:15
 
 - Node LTS
 - Docker 19.06.6
