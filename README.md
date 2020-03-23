@@ -25,3 +25,7 @@ npm run build
 docker build -f docker/Dockerfile -t damiankoper/piw:lab1 . && \
 docker run -p 8080:8080 damiankoper/piw:lab1
 ```
+
+### Jedna z wersji strony głównej
+![localhost_9000_index html](https://user-images.githubusercontent.com/28621467/77304468-c6b82b80-6cf4-11ea-8089-a9a2d34d557b.png)
+
